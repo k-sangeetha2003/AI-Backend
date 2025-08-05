@@ -1,0 +1,62 @@
+Generated Drama Story Script
+============================================================
+Original Idea: python main.py --idea "A time traveler changes history" --genre sci-fi
+Genre: Drama
+Generated on: 2025-07-21 15:31:56
+============================================================
+
+**Title: "A Time Traveler Changes History"**
+
+**Genre: Drama**
+
+**Script Format and Content:**
+
+**Scene 1: The Decision (0-5 seconds)**
+- **Location:** Dimly lit room with a flickering time portal
+- **Visuals:** Soft shadows, muted earth tones, close-up on Alex
+- **Action:** Alex stands before the portal, turmoil evident in their expression. Soft glow from the portal highlights their face.
+- **Dialogue:** Alex (whispering): "What if I change everything?"
+- **Directorial Notes:** Focus on Alex's face to capture the internal conflict. Use natural lighting to enhance the reflective mood.
+- **Timing:** 5 seconds
+- **Genre-Specific Image Prompt:** "Close-up of a conflicted individual in a dimly lit room with a time portal, earthy color palette, soft lighting."
+
+**Scene 2: The Memories (5-10 seconds)**
+- **Location:** Various (flashback montage)
+- **Visuals:** Flashback scenes with warmer tones, dynamic transitions
+- **Action:** Montage of memories with a loved one—laughing in a café, holding hands during a storm, a sorrowful goodbye.
+- **Directorial Notes:** Use quick cuts between flashbacks to enhance emotional impact. Mid-shots and close-ups to focus on emotional expressions.
+- **Timing:** 5 seconds
+- **Genre-Specific Image Prompt:** "Montage of intimate moments in various settings, realistic style, slightly warmer color tones."
+
+**Scene 3: The Resolution (10-15 seconds)**
+- **Location:** Same dimly lit room
+- **Visuals:** Close-up transitioning to a wide shot, increased contrast between light and shadow
+- **Action:** Alex steps toward the portal, resolute yet tearful.
+- **Dialogue:** Alex: "I can’t let this happen again... But at what cost?"
+- **Directorial Notes:** Emphasize the emotional climax with a slow zoom out to reveal the entire room and the portal. Maintain focus on Alex’s facial expressions.
+- **Timing:** 5 seconds
+- **Genre-Specific Image Prompt:** "Determined individual approaching a glowing time portal in a dimly lit room, focused expression, realistic style."
+
+**Technical Notes for Production:**
+- **Camera Work:** Close-ups on Alex’s face for emotional scenes, dynamic transitions for flashbacks.
+- **Lighting:** Natural and soft lighting to enhance realism, subtle shifts in lighting to reflect changes in mood.
+- **Sound:** Minimal background music, soft ambient sounds to enhance the introspective atmosphere.
+
+**Casting Notes:**
+- **Alex:** Mid-30s, any gender, able to convey deep emotional turmoil and resolution. Expressive eyes and subtle facial movements are crucial.
+
+**Production Notes:**
+- Ensure all scenes adhere to the drama conventions of deep emotional engagement and character development.
+- Pay close attention to the pacing and timing of each scene to maintain the 15-second format without losing narrative depth.
+- Coordinate with the visual effects team to realistically depict the time portal, ensuring it symbolically represents the gateway to change.
+
+**Delivery and Pacing Guidance:**
+- Maintain a slow, deliberate pace to allow the audience to fully engage with Alex’s emotional journey.
+- Use pauses effectively after significant lines to let the audience reflect on the gravity of the situation.
+
+**Genre Authenticity Verification:**
+- The script maintains a consistent tone of introspection and emotional charge, aligning with drama conventions.
+- Character development is evident through Alex’s emotional journey within the brief timeframe.
+- The conflict and its resolution are clearly presented, fulfilling the genre’s requirement for a compelling narrative arc.
+
+This script ensures a deeply engaging and emotionally resonant experience, adhering to the specific requirements of the drama genre and effectively utilizing the 15-second format to tell a complete and impactful story.

@@ -1,0 +1,6 @@
+crewai>=0.41.1
+crewai-tools>=0.4.26
+langchain>=0.2.0,<0.4.0
+langchain-community>=0.2.0
+python-dotenv>=1.0.0
+pydantic>=2.5.0
