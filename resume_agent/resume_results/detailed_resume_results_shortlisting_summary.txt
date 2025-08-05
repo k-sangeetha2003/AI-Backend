@@ -1,0 +1,42 @@
+SHORTLISTING SUMMARY REPORT
+==================================================
+
+Analysis Date: 2025-08-05 12:53:07
+Total Candidates: 7
+Shortlisted: 2
+Rejected: 5
+Shortlisting Rate: 28.6%
+
+🏆 SHORTLISTED CANDIDATES:
+------------------------------
+1. Priya Ramesh Phone
+   Score: 84.17%
+   Email: priya.ramesh.dev@gmail.com
+   Phone: +91-98765-43210
+   Experience: 5 years
+   Skills: java, javascript, jenkins, sql, python...
+
+2. John Smith
+   Score: 83.21%
+   Email: john.smith@email.com
+   Phone: (555) 123-4567
+   Experience: 5 years
+   Skills: css, java, javascript, html, data analysis...
+
+❌ REJECTED CANDIDATES:
+------------------------------
+1. Aarav Mehta Phone - Score: 81.43%
+   Reason: Contains avoid keywords
+
+2. Jane Smith Phone - Score: 69.29%
+   Reason: Contains avoid keywords
+
+3. John Doe Phone - Score: 53.93%
+   Reason: Insufficient experience, Low overall score, Contains avoid keywords
+
+4. Alex Turner Phone - Score: 37.38%
+   Reason: Insufficient experience, Low overall score, Contains avoid keywords
+
+5. Priya Sharma Phone - Score: 32.74%
+   Reason: Insufficient experience, Low overall score, Contains avoid keywords
+

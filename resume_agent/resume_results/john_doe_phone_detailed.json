@@ -1,0 +1,46 @@
+{
+  "filename": "john",
+  "personal_info": {
+    "name": "John Doe Phone",
+    "email": "john.doe@example.com",
+    "phone": "+1-234-567-8901",
+    "location": "san francisco",
+    "linkedin": "linkedin.com/in/johndoe",
+    "github": "github.com/johndoe",
+    "website": "",
+    "summary": "phone: +1-234-567-8901 email: john.doe@example.com location: san francisco, ca, usa"
+  },
+  "education": [],
+  "experience": [],
+  "score": 53.93,
+  "required_skills_matched": 6,
+  "preferred_skills_matched": 4,
+  "experience_years": 0,
+  "must_keywords": [
+    "development",
+    "software",
+    "project"
+  ],
+  "avoid_keywords": [
+    "intern"
+  ],
+  "all_skills": [
+    "css",
+    "c++",
+    "java",
+    "mysql",
+    "javascript",
+    "html",
+    "sql",
+    "python",
+    "git",
+    "mongodb",
+    "react",
+    "express",
+    "node.js",
+    "go"
+  ],
+  "total_required_skills": 6,
+  "total_preferred_skills": 7,
+  "analysis_date": "2025-08-05 12:53:07"
+}

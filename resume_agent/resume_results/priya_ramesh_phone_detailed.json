@@ -1,0 +1,60 @@
+{
+  "filename": "ramesh dev",
+  "personal_info": {
+    "name": "Priya Ramesh Phone",
+    "email": "priya.ramesh.dev@gmail.com",
+    "phone": "+91-98765-43210",
+    "location": "bengaluru",
+    "linkedin": "linkedin.com/in/priyaramesh",
+    "github": "github.com/priyaramesh-dev",
+    "website": "",
+    "summary": "📄 professional resume – software engineer phone: +91-98765-43210 email: priya.ramesh.dev@gmail.com"
+  },
+  "education": [],
+  "experience": [
+    {
+      "title": "oriented software engineer",
+      "company": "",
+      "duration": "",
+      "description": ""
+    },
+    {
+      "title": "seeking a role where i can contribute to impactful products using modern engineer",
+      "company": "",
+      "duration": "",
+      "description": ""
+    }
+  ],
+  "score": 84.17,
+  "required_skills_matched": 4,
+  "preferred_skills_matched": 7,
+  "experience_years": 5,
+  "must_keywords": [
+    "experience",
+    "software",
+    "project"
+  ],
+  "avoid_keywords": [],
+  "all_skills": [
+    "java",
+    "javascript",
+    "jenkins",
+    "sql",
+    "python",
+    "git",
+    "ci/cd",
+    "mongodb",
+    "redis",
+    "aws",
+    "react",
+    "express",
+    "docker",
+    "agile",
+    "node.js",
+    "postgresql",
+    "go"
+  ],
+  "total_required_skills": 6,
+  "total_preferred_skills": 7,
+  "analysis_date": "2025-08-05 12:53:07"
+}

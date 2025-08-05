@@ -1,0 +1,35 @@
+RESUME ANALYSIS SUMMARY REPORT
+==================================================
+
+Analysis Date: 2025-08-01 15:47:12
+Total Candidates: 4
+Average Score: 59.8%
+
+1. John Smith
+   Score: 83.21%
+   Email: john.smith@email.com
+   Phone: (555) 123-4567
+   Experience: 5 years
+   Skills: react, javascript, sql, css, node.js...
+
+2. Jane Smith Phone
+   Score: 69.29%
+   Email: jane.smith@example.com
+   Phone: +1-987-654-3210
+   Experience: 5 years
+   Skills: react, sql, kubernetes, mongodb, jenkins...
+
+3. John Doe Phone
+   Score: 53.93%
+   Email: john.doe@example.com
+   Phone: +1-234-567-8901
+   Experience: 0 years
+   Skills: react, javascript, sql, c++, mysql...
+
+4. Priya Sharma Phone
+   Score: 32.74%
+   Email: priya.sharma@gmail.com
+   Phone: +91-98765-43210
+   Experience: 0 years
+   Skills: javascript, sql, mysql, css, java...
+

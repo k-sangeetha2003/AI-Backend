@@ -1,0 +1,49 @@
+{
+  "filename": "priya",
+  "personal_info": {
+    "name": "Priya Sharma Phone",
+    "email": "priya.sharma@gmail.com",
+    "phone": "+91-98765-43210",
+    "location": "hyderabad",
+    "linkedin": "linkedin.com/in/priyasharma123",
+    "github": "github.com/priyasharma-dev",
+    "website": "",
+    "summary": "📄 sample resume – b.tech student (fresher) phone: +91-98765-43210 email: priya.sharma@gmail.com"
+  },
+  "education": [
+    {
+      "degree": "personal portfolio website\ntech stack",
+      "institution": "in computer science\nvnr vignana jyothi institute",
+      "year": "",
+      "gpa": ""
+    }
+  ],
+  "experience": [],
+  "score": 32.74,
+  "required_skills_matched": 4,
+  "preferred_skills_matched": 3,
+  "experience_years": 0,
+  "must_keywords": [
+    "development",
+    "software",
+    "project"
+  ],
+  "avoid_keywords": [
+    "intern",
+    "student"
+  ],
+  "all_skills": [
+    "css",
+    "mysql",
+    "java",
+    "javascript",
+    "html",
+    "sql",
+    "python",
+    "git",
+    "agile"
+  ],
+  "total_required_skills": 6,
+  "total_preferred_skills": 7,
+  "analysis_date": "2025-08-05 12:53:07"
+}

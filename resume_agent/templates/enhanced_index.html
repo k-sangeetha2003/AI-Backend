@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Resume Analyzer - Detailed Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .score-badge {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .skill-progress {
+            height: 8px;
+            border-radius: 4px;
+        }
+        .candidate-card {
+            transition: transform 0.2s;
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .candidate-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .keyword-badge {
+            font-size: 0.8rem;
+            margin: 2px;
+        }
+        .upload-area {
+            border: 2px dashed #dee2e6;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+        .upload-area:hover {
+            border-color: #007bff;
+        }
+        .stats-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+        }
+        .personal-info {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .contact-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .education-section, .experience-section {
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 4px solid #007bff;
+        }
+        .skills-section {
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 4px solid #28a745;
+        }
+        .analysis-section {
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ffc107;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container-fluid py-4">
+        <!-- Header -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="h2 mb-0">
+                        <i class="fas fa-user-tie text-primary"></i>
+                        Enhanced Resume Analyzer
+                    </h1>
+                    <div>
+                        <a href="/export" class="btn btn-success">
+                            <i class="fas fa-download"></i> Export Detailed CSV
+                        </a>
+                    </div>
+                </div>
+                <p class="text-muted">Comprehensive analysis with detailed personal information</p>
+            </div>
+        </div>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <!-- Upload Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-upload"></i> Upload New Resume
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="/upload" method="post" enctype="multipart/form-data">
+                            <div class="upload-area">
+                                <i class="fas fa-cloud-upload-alt fa-3x text-muted mb-3"></i>
+                                <h5>Drag and drop your resume here</h5>
+                                <p class="text-muted">or click to browse</p>
+                                <input type="file" name="file" class="form-control" accept=".pdf,.docx,.txt" required>
+                                <small class="text-muted">Supported formats: PDF, DOCX, TXT</small>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-upload"></i> Upload & Analyze
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics -->
+        {% if results %}
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card stats-card">
+                    <div class="card-body text-center">
+                        <h3>{{ results|length }}</h3>
+                        <p class="mb-0">Total Candidates</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stats-card">
+                    <div class="card-body text-center">
+                        <h3>{{ "%.1f"|format(results|map(attribute='score')|sum / results|length) }}%</h3>
+                        <p class="mb-0">Average Score</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stats-card">
+                    <div class="card-body text-center">
+                        <h3>{{ results|selectattr('score', '>=', 80)|list|length }}</h3>
+                        <p class="mb-0">High Performers (80%+)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stats-card">
+                    <div class="card-body text-center">
+                        <h3>{{ results|selectattr('score', '>=', 60)|list|length }}</h3>
+                        <p class="mb-0">Qualified (60%+)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Results Section -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-users"></i> All Candidate Results
+                            <span class="badge bg-primary ms-2">{{ results|length }} candidates</span>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        {% if results %}
+                            <div class="row">
+                                {% for result in results %}
+                                <div class="col-lg-6 col-xl-4 mb-4">
+                                    <div class="card candidate-card h-100">
+                                        <div class="card-header d-flex justify-content-between align-items-center">
+                                            <h6 class="mb-0">
+                                                <i class="fas fa-user text-primary"></i>
+                                                {{ result.personal_info.name }}
+                                            </h6>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="/candidate/{{ result.filename }}">
+                                                        <i class="fas fa-eye"></i> View Details
+                                                    </a></li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li><a class="dropdown-item text-danger" href="/delete/{{ result.filename }}" 
+                                                           onclick="return confirm('Are you sure you want to delete this candidate?')">
+                                                        <i class="fas fa-trash"></i> Delete
+                                                    </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- Personal Information -->
+                                            <div class="personal-info">
+                                                <h6 class="mb-2"><i class="fas fa-user"></i> Personal Information</h6>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <strong>{{ result.personal_info.name }}</strong>
+                                                    </div>
+                                                    {% if result.personal_info.email %}
+                                                    <div class="col-12">
+                                                        <small><i class="fas fa-envelope"></i> {{ result.personal_info.email }}</small>
+                                                    </div>
+                                                    {% endif %}
+                                                    {% if result.personal_info.phone %}
+                                                    <div class="col-12">
+                                                        <small><i class="fas fa-phone"></i> {{ result.personal_info.phone }}</small>
+                                                    </div>
+                                                    {% endif %}
+                                                    {% if result.personal_info.location %}
+                                                    <div class="col-12">
+                                                        <small><i class="fas fa-map-marker-alt"></i> {{ result.personal_info.location }}</small>
+                                                    </div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+
+                                            <!-- Score -->
+                                            <div class="text-center mb-3">
+                                                {% if result.score >= 80 %}
+                                                    <span class="badge bg-success score-badge">{{ result.score }}%</span>
+                                                {% elif result.score >= 60 %}
+                                                    <span class="badge bg-warning score-badge">{{ result.score }}%</span>
+                                                {% else %}
+                                                    <span class="badge bg-danger score-badge">{{ result.score }}%</span>
+                                                {% endif %}
+                                                <div class="text-muted small">Overall Score</div>
+                                            </div>
+
+                                            <!-- Contact Links -->
+                                            <div class="contact-info">
+                                                <h6 class="mb-2"><i class="fas fa-link"></i> Professional Links</h6>
+                                                <div class="row">
+                                                    {% if result.personal_info.linkedin %}
+                                                    <div class="col-6">
+                                                        <a href="https://{{ result.personal_info.linkedin }}" target="_blank" class="btn btn-sm btn-outline-primary">
+                                                            <i class="fab fa-linkedin"></i> LinkedIn
+                                                        </a>
+                                                    </div>
+                                                    {% endif %}
+                                                    {% if result.personal_info.github %}
+                                                    <div class="col-6">
+                                                        <a href="https://{{ result.personal_info.github }}" target="_blank" class="btn btn-sm btn-outline-dark">
+                                                            <i class="fab fa-github"></i> GitHub
+                                                        </a>
+                                                    </div>
+                                                    {% endif %}
+                                                    {% if result.personal_info.website %}
+                                                    <div class="col-12 mt-2">
+                                                        <a href="{{ result.personal_info.website }}" target="_blank" class="btn btn-sm btn-outline-info">
+                                                            <i class="fas fa-globe"></i> Website
+                                                        </a>
+                                                    </div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+
+                                            <!-- Skills Progress -->
+                                            <div class="skills-section">
+                                                <h6 class="mb-2"><i class="fas fa-tools"></i> Skills Analysis</h6>
+                                                <div class="mb-3">
+                                                    <div class="d-flex justify-content-between mb-1">
+                                                        <small>Required Skills</small>
+                                                        <small>{{ result.required_skills_matched }}/{{ result.total_required_skills }}</small>
+                                                    </div>
+                                                    <div class="progress skill-progress">
+                                                        <div class="progress-bar bg-primary" style="width: {% if result.total_required_skills > 0 %}{{ (result.required_skills_matched / result.total_required_skills) * 100 }}{% else %}0{% endif %}%"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <div class="d-flex justify-content-between mb-1">
+                                                        <small>Preferred Skills</small>
+                                                        <small>{{ result.preferred_skills_matched }}/{{ result.total_preferred_skills }}</small>
+                                                    </div>
+                                                    <div class="progress skill-progress">
+                                                        <div class="progress-bar bg-info" style="width: {% if result.total_preferred_skills > 0 %}{{ (result.preferred_skills_matched * 100 / result.total_preferred_skills) | round(2) }}{% else %}0{% endif %}%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <small><i class="fas fa-clock"></i> Experience</small>
+                                                    <small>{{ result.experience_years }} years</small>
+                                                </div>
+                                            </div>
+
+                                            <!-- Education -->
+                                            {% if result.education %}
+                                            <div class="education-section">
+                                                <h6 class="mb-2"><i class="fas fa-graduation-cap"></i> Education</h6>
+                                                {% for edu in result.education[:2] %}
+                                                <div class="mb-1">
+                                                    <small><strong>{{ edu.degree }}</strong></small><br>
+                                                    <small class="text-muted">{{ edu.institution }}</small>
+                                                </div>
+                                                {% endfor %}
+                                                {% if result.education|length > 2 %}
+                                                <small class="text-muted">+{{ result.education|length - 2 }} more</small>
+                                                {% endif %}
+                                            </div>
+                                            {% endif %}
+
+                                            <!-- Experience -->
+                                            {% if result.experience %}
+                                            <div class="experience-section">
+                                                <h6 class="mb-2"><i class="fas fa-briefcase"></i> Work Experience</h6>
+                                                {% for exp in result.experience[:2] %}
+                                                <div class="mb-1">
+                                                    <small><strong>{{ exp.title }}</strong></small><br>
+                                                    <small class="text-muted">{{ exp.company }}</small>
+                                                </div>
+                                                {% endfor %}
+                                                {% if result.experience|length > 2 %}
+                                                <small class="text-muted">+{{ result.experience|length - 2 }} more</small>
+                                                {% endif %}
+                                            </div>
+                                            {% endif %}
+
+                                            <!-- Keywords -->
+                                            {% if result.must_keywords %}
+                                            <div class="mb-2">
+                                                <small class="text-muted">Must Keywords:</small><br>
+                                                {% for keyword in result.must_keywords %}
+                                                    <span class="badge bg-success keyword-badge">{{ keyword }}</span>
+                                                {% endfor %}
+                                            </div>
+                                            {% endif %}
+
+                                            {% if result.avoid_keywords %}
+                                            <div class="mb-2">
+                                                <small class="text-muted">Avoid Keywords:</small><br>
+                                                {% for keyword in result.avoid_keywords %}
+                                                    <span class="badge bg-danger keyword-badge">{{ keyword }}</span>
+                                                {% endfor %}
+                                            </div>
+                                            {% endif %}
+
+                                            <!-- All Skills -->
+                                            {% if result.all_skills %}
+                                            <div class="analysis-section">
+                                                <h6 class="mb-2"><i class="fas fa-code"></i> Detected Skills</h6>
+                                                <div class="mt-1">
+                                                    {% for skill in result.all_skills[:6] %}
+                                                        <span class="badge bg-light text-dark keyword-badge">{{ skill }}</span>
+                                                    {% endfor %}
+                                                    {% if result.all_skills|length > 6 %}
+                                                        <span class="badge bg-light text-dark keyword-badge">+{{ result.all_skills|length - 6 }} more</span>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            {% endif %}
+
+                                            <!-- File Info -->
+                                            <div class="mt-3 text-center">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-file"></i> {{ result.filename }}<br>
+                                                    <i class="fas fa-calendar"></i> {{ result.analysis_date }}
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="text-center py-5">
+                                <i class="fas fa-user-tie fa-3x text-muted mb-3"></i>
+                                <h5 class="text-muted">No candidates found</h5>
+                                <p class="text-muted">Upload some resumes to see the detailed analysis results</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Auto-hide alerts after 5 seconds
+        setTimeout(function() {
+            var alerts = document.querySelectorAll('.alert');
+            alerts.forEach(function(alert) {
+                var bsAlert = new bootstrap.Alert(alert);
+                bsAlert.close();
+            });
+        }, 5000);
+
+        // File upload preview
+        document.querySelector('input[type="file"]').addEventListener('change', function(e) {
+            const fileName = e.target.files[0]?.name;
+            if (fileName) {
+                const uploadArea = document.querySelector('.upload-area');
+                uploadArea.innerHTML = `
+                    <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+                    <h5>File selected: ${fileName}</h5>
+                    <p class="text-muted">Click "Upload & Analyze" to proceed</p>
+                `;
+            }
+        });
+    </script>
+</body>
+</html> 

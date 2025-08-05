@@ -1,0 +1,47 @@
+{
+  "filename": "sample_resume.txt",
+  "personal_info": {
+    "name": "John Smith",
+    "email": "john.smith@email.com",
+    "phone": "(555) 123-4567",
+    "location": "",
+    "linkedin": "",
+    "github": "",
+    "website": "",
+    "summary": ""
+  },
+  "education": [],
+  "experience": [
+    {
+      "title": "d software engineer",
+      "company": "and modern web technologies",
+      "duration": "",
+      "description": ""
+    }
+  ],
+  "score": 83.21,
+  "required_skills_matched": 6,
+  "preferred_skills_matched": 2,
+  "experience_years": 5,
+  "must_keywords": [
+    "experience",
+    "development",
+    "software"
+  ],
+  "avoid_keywords": [],
+  "all_skills": [
+    "css",
+    "java",
+    "javascript",
+    "html",
+    "data analysis",
+    "sql",
+    "python",
+    "git",
+    "react",
+    "node.js"
+  ],
+  "total_required_skills": 6,
+  "total_preferred_skills": 7,
+  "analysis_date": "2025-08-05 12:53:07"
+}

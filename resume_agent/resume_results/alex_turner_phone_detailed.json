@@ -1,0 +1,53 @@
+{
+  "filename": "alex",
+  "personal_info": {
+    "name": "Alex Turner Phone",
+    "email": "alex.turner@example.com",
+    "phone": "+1-555-123-4567",
+    "location": "austin",
+    "linkedin": "linkedin.com/in/alexturner",
+    "github": "github.com/alexturnercodes",
+    "website": "",
+    "summary": "📄 basic resume – software engineer phone: +1-555-123-4567 email: alex.turner@example.com"
+  },
+  "education": [],
+  "experience": [
+    {
+      "title": "career objective\nenthusiastic software developer",
+      "company": "",
+      "duration": "",
+      "description": ""
+    },
+    {
+      "title": "eager to learn and contribute in a junior",
+      "company": "",
+      "duration": "",
+      "description": ""
+    }
+  ],
+  "score": 37.38,
+  "required_skills_matched": 4,
+  "preferred_skills_matched": 2,
+  "experience_years": 0,
+  "must_keywords": [
+    "experience",
+    "development",
+    "software",
+    "project"
+  ],
+  "avoid_keywords": [
+    "intern"
+  ],
+  "all_skills": [
+    "css",
+    "java",
+    "javascript",
+    "html",
+    "sql",
+    "python",
+    "git"
+  ],
+  "total_required_skills": 6,
+  "total_preferred_skills": 7,
+  "analysis_date": "2025-08-05 12:53:07"
+}

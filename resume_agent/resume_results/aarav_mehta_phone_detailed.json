@@ -1,0 +1,50 @@
+{
+  "filename": "Arava Mehtha",
+  "personal_info": {
+    "name": "Aarav Mehta Phone",
+    "email": "aarav.mehta99@gmail.com",
+    "phone": "+91-91234-56789",
+    "location": "mumbai",
+    "linkedin": "linkedin.com/in/aaravmehta",
+    "github": "github.com/aaravmehta",
+    "website": "",
+    "summary": "📄 professional resume – engineering student phone: +91-91234-56789 email: aarav.mehta99@gmail.com"
+  },
+  "education": [],
+  "experience": [],
+  "score": 81.43,
+  "required_skills_matched": 6,
+  "preferred_skills_matched": 4,
+  "experience_years": 4444,
+  "must_keywords": [
+    "experience",
+    "development",
+    "software",
+    "project"
+  ],
+  "avoid_keywords": [
+    "intern",
+    "student"
+  ],
+  "all_skills": [
+    "css",
+    "c++",
+    "java",
+    "mysql",
+    "javascript",
+    "html",
+    "excel",
+    "figma",
+    "sql",
+    "python",
+    "git",
+    "mongodb",
+    "react",
+    "express",
+    "node.js",
+    "go"
+  ],
+  "total_required_skills": 6,
+  "total_preferred_skills": 7,
+  "analysis_date": "2025-08-05 12:53:07"
+}

@@ -1,0 +1,33 @@
+John Smith
+Software Engineer
+john.smith@email.com
+(555) 123-4567
+
+SUMMARY
+Experienced software engineer with 5 years of experience in web development and Python programming. Proficient in JavaScript, React, Node.js, and modern web technologies.
+
+SKILLS
+- Python (5 years)
+- JavaScript (4 years)
+- HTML/CSS (4 years)
+- React (3 years)
+- Node.js (3 years)
+- Git (4 years)
+- SQL (3 years)
+
+EXPERIENCE
+Senior Developer - Tech Company Inc.
+2020-2023 (3 years of experience)
+- Developed web applications using Python and JavaScript
+- Led team of 5 developers
+- Implemented React components and Node.js backend
+
+Junior Developer - Startup XYZ
+2018-2020 (2 years of experience)
+- Built responsive websites with HTML, CSS, JavaScript
+- Worked with Python for data analysis
+- Used Git for version control
+
+EDUCATION
+Bachelor's Degree in Computer Science
+University of Technology, 2018 

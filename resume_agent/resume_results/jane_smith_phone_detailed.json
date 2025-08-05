@@ -1,0 +1,58 @@
+{
+  "filename": "jane",
+  "personal_info": {
+    "name": "Jane Smith Phone",
+    "email": "jane.smith@example.com",
+    "phone": "+1-987-654-3210",
+    "location": "new york",
+    "linkedin": "linkedin.com/in/janesmith",
+    "github": "github.com/janesmith",
+    "website": "",
+    "summary": "📄 enhanced resume – software engineer phone: +1-987-654-3210 email: jane.smith@example.com"
+  },
+  "education": [],
+  "experience": [
+    {
+      "title": "career objective\npassionate and versatile software engineer",
+      "company": "seeking a challenging opportunity to drive impactful solutions",
+      "duration": "",
+      "description": ""
+    }
+  ],
+  "score": 69.29,
+  "required_skills_matched": 3,
+  "preferred_skills_matched": 5,
+  "experience_years": 5,
+  "must_keywords": [
+    "experience",
+    "development",
+    "software",
+    "project"
+  ],
+  "avoid_keywords": [
+    "intern"
+  ],
+  "all_skills": [
+    "java",
+    "excel",
+    "figma",
+    "sql",
+    "kubernetes",
+    "python",
+    "git",
+    "ci/cd",
+    "mongodb",
+    "redis",
+    "aws",
+    "react",
+    "azure",
+    "docker",
+    "jenkins",
+    "node.js",
+    "postgresql",
+    "go"
+  ],
+  "total_required_skills": 6,
+  "total_preferred_skills": 7,
+  "analysis_date": "2025-08-05 12:53:07"
+}

@@ -1,0 +1,3 @@
+name,email,phone,location,linkedin,github,website,score,required_skills_matched,preferred_skills_matched,experience_years,all_skills,filename
+Priya Ramesh Phone,priya.ramesh.dev@gmail.com,+91-98765-43210,bengaluru,linkedin.com/in/priyaramesh,github.com/priyaramesh-dev,,84.17,4,7,5,"java, javascript, jenkins, sql, python, git, ci/cd, mongodb, redis, aws, react, express, docker, agile, node.js, postgresql, go",ramesh dev
+John Smith,john.smith@email.com,(555) 123-4567,,,,,83.21,6,2,5,"css, java, javascript, html, data analysis, sql, python, git, react, node.js",sample_resume.txt

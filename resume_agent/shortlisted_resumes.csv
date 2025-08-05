@@ -1,0 +1,2 @@
+filename,score,required_skills_matched,preferred_skills_matched,experience_years,must_keywords,avoid_keywords
+sample_resume.txt,83.21,6,2,5,"experience, development, software",
