@@ -1,0 +1,12 @@
+crewai>=0.152.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+langchain-community>=0.0.10
+langchain-openai>=0.0.3
+langchain-core>=0.1.0
+pillow>=10.0.0
+python-slugify>=8.0.1
+urllib3>=2.0.7
+colorlog>=6.7.0
+supabase 

@@ -1,0 +1,52 @@
+2025-08-01 10:41:13,211 - __main__ - INFO - Log file created: logs/content_generation_20250801_104113_monday_fitness_motivation.log
+2025-08-01 10:41:13,212 - __main__ - INFO - Original idea: monday fitness motivation
+2025-08-01 10:41:13,212 - __main__ - INFO - Current working directory: C:\mobile app\social_media_content_generator
+2025-08-01 10:41:13,213 - __main__ - INFO - Loading environment variables...
+2025-08-01 10:41:13,214 - __main__ - INFO - Environment variables loaded:
+2025-08-01 10:41:13,215 - __main__ - INFO - OPENAI_API_KEY present: False
+2025-08-01 10:41:13,215 - __main__ - INFO - OPENROUTER_API_KEY present: True
+2025-08-01 10:41:13,215 - __main__ - INFO - Starting Social Media Content Generator
+2025-08-01 10:41:13,215 - __main__ - INFO - Initializing SocialMediaContentGenerator
+2025-08-01 10:41:13,217 - __main__ - INFO - Simple database logger initialized successfully
+2025-08-01 10:41:13,217 - __main__ - INFO - Database logger initialized successfully
+2025-08-01 10:41:13,217 - __main__ - INFO - Initializing SocialMediaCrew
+2025-08-01 10:41:13,219 - __main__ - INFO - Simple database logger initialized successfully
+2025-08-01 10:41:13,219 - __main__ - INFO - Database logger initialized in crew
+2025-08-01 10:41:13,723 - __main__ - INFO - Language model (OpenRouter) configured successfully with model: openai/gpt-3.5-turbo
+2025-08-01 10:41:13,723 - __main__ - INFO - Model configurations from config:
+2025-08-01 10:41:13,724 - __main__ - INFO -   content_strategist: openai/gpt-3.5-turbo (temp: 0.7)
+2025-08-01 10:41:13,724 - __main__ - INFO -   content_writer: openai/gpt-3.5-turbo (temp: 0.8)
+2025-08-01 10:41:13,724 - __main__ - INFO -   hashtag_specialist: openai/gpt-3.5-turbo (temp: 0.6)
+2025-08-01 10:41:13,724 - __main__ - INFO -   visual_designer: openai/gpt-3.5-turbo (temp: 0.7)
+2025-08-01 10:41:13,724 - __main__ - INFO - Validating setup
+2025-08-01 10:41:13,725 - __main__ - INFO - SocialMediaContentGenerator initialized successfully
+2025-08-01 10:41:23,361 - __main__ - INFO - Selected platforms: instagram
+2025-08-01 10:41:28,977 - __main__ - INFO - Selected tones: ['formal']
+2025-08-01 10:41:51,345 - __main__ - INFO - Selected audiences: ['young adults']
+2025-08-01 10:41:51,857 - __main__ - ERROR - Failed to start generation session: Failed to create session record
+2025-08-01 10:41:51,857 - __main__ - INFO - Started database logging session: None
+2025-08-01 10:41:51,857 - __main__ - INFO - Generating content for platform: instagram
+2025-08-01 10:41:51,858 - __main__ - INFO - ==================================================
+2025-08-01 10:41:51,858 - __main__ - INFO - Crew Execution Started
+2025-08-01 10:41:51,858 - __main__ - INFO - Crew ID: 20250801-104151
+2025-08-01 10:41:51,858 - __main__ - INFO - ==================================================
+2025-08-01 10:41:51,859 - __main__ - ERROR - Invalid audience: young adults
+2025-08-01 10:41:52,011 - __main__ - ERROR - API request failed: 400 Client Error: Bad Request for url: https://wwrnhbjkfnuhgjxanixy.supabase.co/rest/v1/error_logs
+2025-08-01 10:41:52,012 - __main__ - ERROR - Failed to log user-facing error: 400 Client Error: Bad Request for url: https://wwrnhbjkfnuhgjxanixy.supabase.co/rest/v1/error_logs
+2025-08-01 10:41:52,012 - __main__ - ERROR - Content generation failed: Unsupported audience 'young adults'. Choose from: teens (13-19), young adults (20-29), adults (30-45), middle-aged (46-60), seniors (60+), children (0-12), professionals, students, entrepreneurs, executives, tech enthusiasts, creatives, health enthusiasts, luxury consumers, budget-conscious, beginners, experts, general audience
+Traceback (most recent call last):
+  File "C:\mobile app\social_media_content_generator\src\main.py", line 58, in generate_content
+    result = self.crew.run(idea, platform, tones, audiences)
+  File "C:\mobile app\social_media_content_generator\src\crew.py", line 176, in run
+    self._validate_inputs(platform, tones, audiences)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\mobile app\social_media_content_generator\src\crew.py", line 518, in _validate_inputs
+    raise ValueError(error_msg)
+ValueError: Unsupported audience 'young adults'. Choose from: teens (13-19), young adults (20-29), adults (30-45), middle-aged (46-60), seniors (60+), children (0-12), professionals, students, entrepreneurs, executives, tech enthusiasts, creatives, health enthusiasts, luxury consumers, budget-conscious, beginners, experts, general audience
+2025-08-01 10:41:52,176 - __main__ - ERROR - API request failed: 400 Client Error: Bad Request for url: https://wwrnhbjkfnuhgjxanixy.supabase.co/rest/v1/error_logs
+2025-08-01 10:41:52,176 - __main__ - ERROR - Failed to log user-facing error: 400 Client Error: Bad Request for url: https://wwrnhbjkfnuhgjxanixy.supabase.co/rest/v1/error_logs
+2025-08-01 10:41:52,177 - __main__ - WARNING - No active session to complete.
+2025-08-01 10:41:52,177 - __main__ - ERROR - Failed to generate content for instagram: Content generation failed: Unsupported audience 'young adults'. Choose from: teens (13-19), young adults (20-29), adults (30-45), middle-aged (46-60), seniors (60+), children (0-12), professionals, students, entrepreneurs, executives, tech enthusiasts, creatives, health enthusiasts, luxury consumers, budget-conscious, beginners, experts, general audience
+2025-08-01 10:41:52,331 - __main__ - ERROR - API request failed: 400 Client Error: Bad Request for url: https://wwrnhbjkfnuhgjxanixy.supabase.co/rest/v1/error_logs
+2025-08-01 10:41:52,332 - __main__ - ERROR - Failed to log user-facing error: 400 Client Error: Bad Request for url: https://wwrnhbjkfnuhgjxanixy.supabase.co/rest/v1/error_logs
+2025-08-01 10:41:52,332 - __main__ - INFO - Content generation and display completed successfully

@@ -1,0 +1,97 @@
+2025-08-01 09:54:37,730 - __main__ - INFO - Log file created: logs/content_generation_20250801_095437_visiting_ooty.log
+2025-08-01 09:54:37,730 - __main__ - INFO - Original idea: visiting ooty
+2025-08-01 09:54:37,731 - __main__ - INFO - Current working directory: C:\mobile app\social_media_content_generator
+2025-08-01 09:54:37,731 - __main__ - INFO - Loading environment variables...
+2025-08-01 09:54:37,733 - __main__ - INFO - Environment variables loaded:
+2025-08-01 09:54:37,733 - __main__ - INFO - OPENAI_API_KEY present: False
+2025-08-01 09:54:37,734 - __main__ - INFO - OPENROUTER_API_KEY present: True
+2025-08-01 09:54:37,735 - __main__ - INFO - Starting Social Media Content Generator
+2025-08-01 09:54:37,735 - __main__ - INFO - Initializing SocialMediaContentGenerator
+2025-08-01 09:54:37,736 - __main__ - INFO - Simple database logger initialized successfully
+2025-08-01 09:54:37,736 - __main__ - INFO - Database logger initialized successfully
+2025-08-01 09:54:37,736 - __main__ - INFO - Initializing SocialMediaCrew
+2025-08-01 09:54:37,737 - __main__ - INFO - Simple database logger initialized successfully
+2025-08-01 09:54:37,737 - __main__ - INFO - Database logger initialized in crew
+2025-08-01 09:54:38,237 - __main__ - INFO - Language model (OpenRouter) configured successfully with model: openai/gpt-3.5-turbo
+2025-08-01 09:54:38,237 - __main__ - INFO - Model configurations from config:
+2025-08-01 09:54:38,237 - __main__ - INFO -   content_strategist: openai/gpt-3.5-turbo (temp: 0.7)
+2025-08-01 09:54:38,237 - __main__ - INFO -   content_writer: openai/gpt-3.5-turbo (temp: 0.8)
+2025-08-01 09:54:38,238 - __main__ - INFO -   hashtag_specialist: openai/gpt-3.5-turbo (temp: 0.6)
+2025-08-01 09:54:38,238 - __main__ - INFO -   visual_designer: openai/gpt-3.5-turbo (temp: 0.7)
+2025-08-01 09:54:38,238 - __main__ - INFO - Validating setup
+2025-08-01 09:54:38,238 - __main__ - INFO - SocialMediaContentGenerator initialized successfully
+2025-08-01 09:54:43,290 - __main__ - INFO - Selected platforms: instagram
+2025-08-01 09:54:53,474 - __main__ - INFO - Selected tones: ['formal']
+2025-08-01 09:55:08,810 - __main__ - INFO - Selected audiences: ['general audience']
+2025-08-01 09:55:09,427 - __main__ - ERROR - Failed to start generation session: Failed to create session record
+2025-08-01 09:55:09,429 - __main__ - INFO - Started database logging session: None
+2025-08-01 09:55:09,429 - __main__ - INFO - Generating content for platform: instagram
+2025-08-01 09:55:09,430 - __main__ - INFO - ==================================================
+2025-08-01 09:55:09,430 - __main__ - INFO - Crew Execution Started
+2025-08-01 09:55:09,430 - __main__ - INFO - Crew ID: 20250801-095509
+2025-08-01 09:55:09,431 - __main__ - INFO - ==================================================
+2025-08-01 09:55:09,432 - __main__ - INFO - Content Strategist Agent: Started
+2025-08-01 09:55:09,432 - __main__ - WARNING - No active session. Skipping agent execution logging.
+2025-08-01 09:55:09,434 - __main__ - ERROR - Content Generation Error
+2025-08-01 09:55:09,434 - __main__ - ERROR - Error details: 1 validation error for Agent
+tools.0
+  Input should be a valid dictionary or instance of BaseTool [type=model_type, input_value=Tool(name='url_scraper', ... at 0x00000239D60600E0>), input_type=Tool]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+Traceback (most recent call last):
+  File "C:\mobile app\social_media_content_generator\src\crew.py", line 193, in run
+    strategy_result = self._execute_strategist_task(idea, platform, tones, audiences)
+  File "C:\mobile app\social_media_content_generator\src\crew.py", line 584, in _execute_strategist_task
+    content_strategist = ContentStrategist.create(strategist_llm)
+  File "C:\mobile app\social_media_content_generator\src\agents\content_strategist.py", line 21, in create
+    return Agent(
+        role='Content Strategist',
+    ...<6 lines>...
+        verbose=True
+    )
+  File "C:\mobile app\social_media_content_generator\.venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Agent
+tools.0
+  Input should be a valid dictionary or instance of BaseTool [type=model_type, input_value=Tool(name='url_scraper', ... at 0x00000239D60600E0>), input_type=Tool]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+2025-08-01 09:55:09,438 - __main__ - ERROR - Content generation failed: Content generation failed: 1 validation error for Agent
+tools.0
+  Input should be a valid dictionary or instance of BaseTool [type=model_type, input_value=Tool(name='url_scraper', ... at 0x00000239D60600E0>), input_type=Tool]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+Traceback (most recent call last):
+  File "C:\mobile app\social_media_content_generator\src\crew.py", line 193, in run
+    strategy_result = self._execute_strategist_task(idea, platform, tones, audiences)
+  File "C:\mobile app\social_media_content_generator\src\crew.py", line 584, in _execute_strategist_task
+    content_strategist = ContentStrategist.create(strategist_llm)
+  File "C:\mobile app\social_media_content_generator\src\agents\content_strategist.py", line 21, in create
+    return Agent(
+        role='Content Strategist',
+    ...<6 lines>...
+        verbose=True
+    )
+  File "C:\mobile app\social_media_content_generator\.venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Agent
+tools.0
+  Input should be a valid dictionary or instance of BaseTool [type=model_type, input_value=Tool(name='url_scraper', ... at 0x00000239D60600E0>), input_type=Tool]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\mobile app\social_media_content_generator\src\main.py", line 58, in generate_content
+    result = self.crew.run(idea, platform, tones, audiences)
+  File "C:\mobile app\social_media_content_generator\src\crew.py", line 445, in run
+    raise Exception(f"Content generation failed: {str(e)}")
+Exception: Content generation failed: 1 validation error for Agent
+tools.0
+  Input should be a valid dictionary or instance of BaseTool [type=model_type, input_value=Tool(name='url_scraper', ... at 0x00000239D60600E0>), input_type=Tool]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+2025-08-01 09:55:09,581 - __main__ - ERROR - API request failed: 400 Client Error: Bad Request for url: https://wwrnhbjkfnuhgjxanixy.supabase.co/rest/v1/error_logs
+2025-08-01 09:55:09,582 - __main__ - ERROR - Failed to log error: 400 Client Error: Bad Request for url: https://wwrnhbjkfnuhgjxanixy.supabase.co/rest/v1/error_logs
+2025-08-01 09:55:09,583 - __main__ - WARNING - No active session to complete.
+2025-08-01 09:55:09,584 - __main__ - ERROR - Failed to generate content for instagram: Content generation failed: Content generation failed: 1 validation error for Agent
+tools.0
+  Input should be a valid dictionary or instance of BaseTool [type=model_type, input_value=Tool(name='url_scraper', ... at 0x00000239D60600E0>), input_type=Tool]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+2025-08-01 09:55:09,585 - __main__ - INFO - Content generation and display completed successfully
